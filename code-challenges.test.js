@@ -128,52 +128,75 @@ var vowelTester2 = "academy"
 var vowelTester3 = "challenges"
 // Expected output: 2
 
-describe("find the vowels", () =>{
-    test("locate the vowels and log it", ()=>{
-        expect("1")
-        expect("0")
-        expect("2")
+//create a function - firstVowel
+// parameter - strings
+// iterate - for loop to look at each character in the string
+// conditional statemnt - is the character a vowel
+// logical or || to check for vowels
+
+describe("firstVowel", () =>{
+    test("takes in a string and logs the index of the first vowel", ()=>{
+        expect(firstVowel(vowelTester1)).toEqual(1)
+        expect(firstVowel(vowelTester2)).toEqual(0)
+        expect(firstVowel(vowelTester3)).toEqual(2)
     })
 })
     
 // b) Create the function that makes the test pass.
 
-
-if (vowelTester1[1] === "a"){
-    console.log("1")
-}else if(vowelTester1[1]=== "e"){
-    console.log("1")
-}else if(vowelTester1[1]=== "i"){
-    console.log("1")
-}else if(vowelTester1[1]=== "o"){
-    console.log("1")
-}else if(vowelTester1[1]=== "u"){
-    console.log("1")
+const firstVowel = (string) =>{
+    for(let i=0; i<string.length; i++){
+        if(string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[u] === 'u'){ // instead of ("a", "e", "i", "o", "u") like i tried the first time, we used pipes to search them individually instead of all at once.
+            return i // we used return i to end the loop early to log just the first instance
+        }
+    }
 }
 
-if (vowelTester2[0] === "a"){
-    console.log("0")
-}else if(vowelTester2[0]=== "e"){
-    console.log("0")
-}else if(vowelTester2[0]=== "i"){
-    console.log("0")
-}else if(vowelTester2[0]=== "o"){
-    console.log("0")
-}else if(vowelTester2[0]=== "u"){
-    console.log("0")
-}
+// this is the old code
 
-if (vowelTester3[2] === "a"){
-    console.log("2")
-}else if(vowelTester3[2]=== "e"){
-    console.log("2")
-}else if(vowelTester3[2]=== "i"){
-    console.log("2")
-}else if(vowelTester3[2]=== "o"){
-    console.log("2")
-}else if(vowelTester3[2]=== "u"){
-    console.log("2")
-}
+// describe("find the vowels", () =>{
+//     test("locate the vowels and log it", ()=>{
+//         expect("1")
+//         expect("0")
+//         expect("2")
+//     })
+// })
+
+// if (vowelTester1[1] === "a"){
+//     console.log("1")
+// }else if(vowelTester1[1]=== "e"){
+//     console.log("1")
+// }else if(vowelTester1[1]=== "i"){
+//     console.log("1")
+// }else if(vowelTester1[1]=== "o"){
+//     console.log("1")
+// }else if(vowelTester1[1]=== "u"){
+//     console.log("1")
+// }
+
+// if (vowelTester2[0] === "a"){
+//     console.log("0")
+// }else if(vowelTester2[0]=== "e"){
+//     console.log("0")
+// }else if(vowelTester2[0]=== "i"){
+//     console.log("0")
+// }else if(vowelTester2[0]=== "o"){
+//     console.log("0")
+// }else if(vowelTester2[0]=== "u"){
+//     console.log("0")
+// }
+
+// if (vowelTester3[2] === "a"){
+//     console.log("2")
+// }else if(vowelTester3[2]=== "e"){
+//     console.log("2")
+// }else if(vowelTester3[2]=== "i"){
+//     console.log("2")
+// }else if(vowelTester3[2]=== "o"){
+//     console.log("2")
+// }else if(vowelTester3[2]=== "u"){
+//     console.log("2")
+// }
 
 
 
